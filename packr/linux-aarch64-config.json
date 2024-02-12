@@ -1,0 +1,20 @@
+{
+    "platform": "linuxaarch64",
+    "jdk": "linux-aarch64-jdk",
+    "executable": "PaeScape",
+    "classpath": [
+        "build/libs/PaeScapeLauncher.jar"
+    ],
+    "mainclass": "online.paescape.launcher.Launcher",
+    "vmargs": [
+       "-Dpaescape.launcher.nojvm=true",
+       "-Xmx512m",
+       "-Xss2m",
+       "-XX:CompileThreshold=1500"
+    ],
+    "output": "native-linux-aarch64/PaeScape.AppDir/",
+    "resources": [
+      "build/filtered-resources/paescape.desktop",
+      "appimage/paescape.png"
+    ]
+}

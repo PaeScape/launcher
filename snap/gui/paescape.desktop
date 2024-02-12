@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PaeScape
+Comment=PaeScape Client
+Exec=paescape
+Icon=${SNAP}/meta/gui/paescape.png
+Type=Application
+Categories=Game;
+StartupNotify=false
+Keywords=paescape

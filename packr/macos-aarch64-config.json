@@ -1,0 +1,19 @@
+{
+    "platform": "macaarch64",
+    "icon": "packr/paescape.icns",
+    "jdk": "osx-aarch64-jdk",
+    "executable": "PaeScape",
+    "classpath": [
+        "build/libs/PaeScapeLauncher.jar"
+    ],
+    "mainclass": "online.paescape.launcher.Launcher",
+    "vmargs": [
+       "-Dpaescape.launcher.nojvm=true",
+       "-Xmx512m",
+       "-Xss2m",
+       "-XX:CompileThreshold=1500",
+       "--add-opens=java.desktop/com.apple.eawt=ALL-UNNAMED",
+       "--add-opens=java.desktop/sun.awt=ALL-UNNAMED"
+    ],
+    "output": "native-osx-aarch64/PaeScape.app"
+}

@@ -1,0 +1,74 @@
+target
+nbactions.xml
+nb-configuration.xml
+/nbproject/
+project.properties
+*.iml
+.idea/
+.project
+.settings/
+.classpath
+*.jar
+!gradle-wrapper.jar
+.live/
+**/build/*
+*/out/
+.gradle/
+.staging/
+.vscode
+.factorypath
+hs_err_pid*.log
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+*.tar.gz
+*.zip
+packr_*
+osx-aarch64-jdk/
+linux-jdk/
+linux-aarch64-jdk/
+osx-jdk/
+win32-jdk/
+win64-jdk/
+
+native-linux-aarch64/
+native-linux-x86_64/
+native-osx-aarch64/
+native-osx/
+native-win32/
+native-win64/
+
+vcredist_x64.exe
+vcredist_x86.exe
+
+jre/
+
+AppRun
+appimagetool-x86_64.AppImage
+
+runtime-aarch64
