@@ -3,7 +3,7 @@ name: PaeScape - CI (push)
 on:
   push:
     branches:
-      - main
+      - testing/setup-build
 
 jobs:
   windows:

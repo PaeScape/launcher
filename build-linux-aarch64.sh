@@ -4,7 +4,7 @@
 
 JDK_VER="11.0.8"
 JDK_BUILD="10"
-PACKR_VERSION="paescape-0.1"
+PACKR_VERSION="4.0.0"
 APPIMAGE_VERSION="12"
 
 umask 022
@@ -24,12 +24,12 @@ if ! [ -d linux-aarch64-jdk ] ; then
     mv jdk-$JDK_VER+$JDK_BUILD-jre linux-aarch64-jdk/jre
 fi
 
-if ! [ -f packr_${PACKR_VERSION}.jar ] ; then
-    curl -Lo packr_${PACKR_VERSION}.jar \
-        https://github.com/paescape/packr/releases/download/${PACKR_VERSION}/packr.jar
+if ! [ -f packr-all-${PACKR_VERSION}.jar ] ; then
+    curl -Lo packr-all-${PACKR_VERSION}.jar \
+        https://github.com/libgdx/packr/releases/download/${PACKR_VERSION}/packr-all-${PACKR_VERSION}.jar
 fi
 
-echo "65c03c56173c5fc0965e70fab7576f6597f3af6e9477865536ecf872c383df8b  packr_${PACKR_VERSION}.jar" | sha256sum -c
+echo "e2047f5b098bd5ca05150a530f3ada3a7f07bd846be730b92378180bdd3d8be2  packr-all-${PACKR_VERSION}.jar" | sha256sum -c
 
 # Note: Host umask may have checked out this directory with g/o permissions blank
 chmod -R u=rwX,go=rX appimage
@@ -38,7 +38,7 @@ chmod 644 build/libs/PaeScapeLauncher.jar
 
 rm -rf native-linux-aarch64
 
-java -jar packr_${PACKR_VERSION}.jar \
+java -jar packr-all-${PACKR_VERSION}.jar \
     packr/linux-aarch64-config.json
 
 pushd native-linux-aarch64/PaeScape.AppDir

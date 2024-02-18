@@ -69,6 +69,6 @@ vcredist_x86.exe
 jre/
 
 AppRun
-appimagetool-x86_64.AppImage
+*.AppImage
 
 runtime-aarch64

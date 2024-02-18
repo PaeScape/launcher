@@ -4,7 +4,7 @@ set -e
 
 JDK_VER="11.0.14.1"
 JDK_BUILD="1"
-PACKR_VERSION="paescape-0.1"
+PACKR_VERSION="4.0.0"
 
 SIGNING_IDENTITY="Developer ID Application"
 
@@ -30,14 +30,14 @@ if ! [ -d osx-jdk ] ; then
     popd
 fi
 
-if ! [ -f packr_${PACKR_VERSION}.jar ] ; then
-    curl -Lo packr_${PACKR_VERSION}.jar \
-        https://github.com/paescape/packr/releases/download/${PACKR_VERSION}/packr.jar
+if ! [ -f packr-all-${PACKR_VERSION}.jar ] ; then
+    curl -Lo packr-all-${PACKR_VERSION}.jar \
+        https://github.com/libgdx/packr/releases/download/${PACKR_VERSION}/packr-all-${PACKR_VERSION}.jar
 fi
 
-echo "65c03c56173c5fc0965e70fab7576f6597f3af6e9477865536ecf872c383df8b  packr_${PACKR_VERSION}.jar" | shasum -c
+echo "e2047f5b098bd5ca05150a530f3ada3a7f07bd846be730b92378180bdd3d8be2  packr-all-${PACKR_VERSION}.jar" | sha256sum -c
 
-java -jar packr_${PACKR_VERSION}.jar \
+java -jar packr-all-${PACKR_VERSION}.jar \
     packr/macos-x64-config.json
 
 cp build/filtered-resources/Info.plist native-osx/PaeScape.app/Contents
