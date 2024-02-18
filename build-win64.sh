@@ -5,7 +5,7 @@ set -e
 JDK_VER="11.0.8"
 JDK_BUILD="10"
 JDK_BUILD_SHORT="10"
-PACKR_VERSION="paescape-0.1"
+PACKR_VERSION="4.0.0"
 
 if ! [ -f OpenJDK11U-jre_x64_windows_hotspot_${JDK_VER}_${JDK_BUILD}.zip ] ; then
     curl -Lo OpenJDK11U-jre_x64_windows_hotspot_${JDK_VER}_${JDK_BUILD}.zip \
